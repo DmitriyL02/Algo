@@ -1,0 +1,17 @@
+def change_value(arr, left, right):
+    arr[left], arr[right] = arr[right], arr[left]
+    return arr
+
+
+def reverseString(s):
+    """
+    Do not return anything, modify s in-place instead.
+    """
+    end = len(s) - 1
+    start = 0
+
+    while start < end:
+        s = change_value(s, start, end)
+
+        start += 1
+        end -= 1

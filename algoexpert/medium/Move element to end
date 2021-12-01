@@ -1,0 +1,12 @@
+def moveElementToEnd(array, toMove):
+
+    pos = 0
+    length = len(array)
+
+    for i in range(length):
+
+        if array[i] != toMove:
+            array[pos], array[i] = array[i], array[pos]
+            pos += 1
+
+    return array
